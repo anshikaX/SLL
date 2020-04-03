@@ -11,9 +11,9 @@ public class SingleLinkedList
         System.out.println("Enter the number of nodes");
         int n=sc.nextInt();
 
-        Node temp = new Node();
         for(int i=0;i<n;i++)
         {
+            Node temp = new Node();
             System.out.println("Enter the value in a node");
             int value = sc.nextInt();
             temp.data = value;
@@ -212,7 +212,8 @@ public class SingleLinkedList
                     if(current_node!=null)
                     {
                         current_node.next=current_node.next.next;
-                        if(current_node==tail){
+                        if(current_node==tail)
+                        {
                             tail=current_node;
                         }
                     }

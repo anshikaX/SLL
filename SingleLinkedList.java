@@ -43,7 +43,7 @@ public class SingleLinkedList
         }
     }
 
-    //Insertion of a node at start,end and beginning position
+    //Insertion of a node at start, specific and end position
     public void insertNode()
     {
         Node temp = new Node();
@@ -148,7 +148,7 @@ public class SingleLinkedList
             if(currentNode.data==value)
             {
                 System.out.println("Value found!!");
-                System.out.println("Value is: " +currentNode.next + " and it's position is: " +counter);
+                System.out.println("Value is: " +currentNode.data + " and it's position is: " +counter);
                 break;
             }
             counter++;

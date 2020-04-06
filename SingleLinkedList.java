@@ -209,10 +209,10 @@ public class SingleLinkedList
                         current_node=current_node.next;
                         counter++;
                     }
-                    if(current_node!=null)
+                    if(current_node.next!=null)
                     {
                         current_node.next=current_node.next.next;
-                        if(current_node==tail)
+                        if(current_node.next==tail)
                         {
                             tail=current_node;
                         }

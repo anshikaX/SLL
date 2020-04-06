@@ -164,6 +164,7 @@ public class SingleLinkedList
     //Deleting of node from SingleLinkedList which has a given value
     public void delete()
     {
+        Node temp = new Node();
         System.out.println("\n1. Delete the node from the beginning of the list. \n2.Delete the node at the specific position. \n3.Delete the node from the end of the list.");
         int choice = sc.nextInt();
 

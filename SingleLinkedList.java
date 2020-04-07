@@ -181,6 +181,7 @@ public class SingleLinkedList
                 }
                 else                //More than one node's case
                 {
+
                     head = head.next;
                 }
                 break;
@@ -191,6 +192,11 @@ public class SingleLinkedList
                 if(head==null)
                 {
                     System.out.println("Linked list doesn't exist!!!");
+                }
+                else if(head==tail && pos==1)
+                {
+                    head = null;
+                    tail = null;
                 }
                 else if(head!=tail && pos==1)
                 {
@@ -227,7 +233,7 @@ public class SingleLinkedList
             case 3:
                 if(head==null)
                 {
-                    System.out.println("Linked list doesn't exits.");
+                    System.out.println("Linked list doesn't exist.");
                 }
                 else if(head==tail)   //If there is just one node that is the last node.
                 {
@@ -259,7 +265,6 @@ public class SingleLinkedList
     //Deleting entire Linked list
     public void deleteSLL()
     {
-        System.out.println("\n\n Deleting Linked list...");
         head=null;
         tail=null;
         System.out.println("Linked list deleted successfully");

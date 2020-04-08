@@ -76,10 +76,16 @@ public class SingleLinkedList
                 System.out.println("Enter the position where you want to create a node");
                 int position = sc.nextInt();
 
-                if(position==1)
+                if(head==null && position==1)
                 {
-                    temp.next = head;
-                    head = temp;
+                    head=temp;
+                    tail=temp;
+
+                }
+                else if(head!=null && position==1)
+                {
+                    temp.next=head;
+                    head=temp;
 
                 }
                 else
@@ -207,7 +213,7 @@ public class SingleLinkedList
                     {
                     Node current_node=head;
                     int counter=1;
-                    while(current_node!=null)
+                    while(current_node!=tail)
                     {
                         if(counter==pos-1)
                         {
@@ -216,13 +222,14 @@ public class SingleLinkedList
                         current_node=current_node.next;
                         counter++;
                     }
-                    if(current_node.next!=null)
+                    if(current_node!=tail)
                     {
-                        current_node.next=current_node.next.next;
                         if(current_node.next==tail)
                         {
                             tail=current_node;
                         }
+                        current_node.next=current_node.next.next;
+
                     }
                     else
                         {
